@@ -14,3 +14,23 @@
 #+SELECT_TAGS: export
 
 Implement FUSE in Python 3
+
+** Setup
+*** Install FUSE
+    - [[https://github.com/libfuse/libfuse][libfuse]]
+*** Install fusepy
+    #+BEGIN_SRC sh nil
+      pip install fusepy
+    #+END_SRC
+
+** Test
+   - In a terminal
+     #+BEGIN_SRC sh nil
+       mkdir fuse-test
+       sudo python fusedate.py fuse-test
+     #+END_SRC
+   - In another terminal
+     #+BEGIN_SRC sh nil
+       cd fuse-test
+       cat date
+     #+END_SRC
